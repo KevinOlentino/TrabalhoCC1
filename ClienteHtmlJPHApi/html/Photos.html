@@ -1,0 +1,13 @@
+﻿<div ng-controller="photosController">
+    <div class="row">
+        <div class="card" style="width: 163px;margin-left:10px;margin-top:10px;text-align:center;" ng-repeat="photo in photos | limitTo: 1000">
+            <img src="{{photo.thumbnailUrl}}" alt="...">
+            <div class="cardy-body" style="text-align:center;">
+                <h5 class="mt-0 mb-1">ID:{{photo.id}}</h5>
+                <p class="card-text">{{photo.albumId}}</p>
+                <p class="card-text">{{photo.title}}</p>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-success" onclick="location.href='';">voltar</button>
+</div>

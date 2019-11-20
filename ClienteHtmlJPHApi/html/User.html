@@ -1,0 +1,57 @@
+﻿<div ng-controller="userController">
+    <div class="container">
+        <div class="row border">
+            <div class="col-6">
+                <ul class="list-group">
+                    <li class="list-group-item" style="text-align:center;">Pessoal Information</li>
+                    <li class="list-group-item">ID: {{user.id}}</li>
+                    <li class="list-group-item">Name: {{user.name}}</li>
+                    <li class="list-group-item">Username: {{user.username}}</li>
+                    <li class="list-group-item">Email: {{user.email}}</li>
+                    <li class="list-group-item">Phone: {{user.phone}}</li>
+                    <li class="list-group-item">Website:{{user.website}}</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <ul>
+                    <li class="list-group-item" style="text-align:center;">Address</li>
+                    <li class="list-group-item">
+                        Street:{{user.address.street}}
+                    </li>
+                    <li class="list-group-item">
+                        Suite:{{user.address.suite}}
+                    </li>
+                    <li class="list-group-item">
+                        City:{{user.address.city}}
+                    </li>
+                    <li class="list-group-item">
+                        ZipCode:{{user.address.zipcode}}
+                    </li>
+                </ul>
+                <div class="col-6">
+                    <ul>
+                        <li class="list-group-item" style="text-align:center;">
+                            Geo
+                        </li>
+                        <li class="list-group-item">
+                            Lat: {{user.address.geo.lat}}
+                        </li>
+                        <li class="list-group-item">
+                            Lng: {{user.address.geo.lng}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding:3px;text-align:center">           
+                <div class="card text-white bg-dark mb-3 col-4" style="max-width: 18rem; margin-left:50px" ng-repeat="todo in todos">
+                    <div class="card-header">ID: {{todo.id}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{todo.title}}</h5>
+                        <p class="card-text">Completed:{{todo.completed}}.</p>
+                    </div>
+            </div>
+        </div>
+        <button class="btn btn-success" onclick="location.href='';">voltar</button>
+    </div>
+</div>

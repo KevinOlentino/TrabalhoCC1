@@ -1,0 +1,24 @@
+﻿<div ng-controller="todosController" data-ng-init="getTodo();">
+
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>UserId</td>
+                    <td>id</td>
+                    <td>Title</td>
+                    <td>Completed</td>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="todo in todos">
+                    <td>{{todo.userId}}</td>
+                    <td>{{todo.id}}</td>
+                    <td>{{todo.title}}</td>
+                    <td>{{todo.completed}}</td>                    
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-success" onclick="location.href='';">voltar</button>
+    </div>
+</div>

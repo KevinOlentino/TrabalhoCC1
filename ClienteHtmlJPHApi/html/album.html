@@ -1,0 +1,21 @@
+﻿<div class="container" ng-controller="albumController">
+    <div class="row" style="margin-top:10px;">
+        
+            <button class="card" style="width: 163px;margin-left:10px;margin-top:10px;text-align:center;" data-toggle="modal" data-target=".showimage" onclick="getSelection" ng-repeat="photo in photos">
+                <img src="{{photo.thumbnailUrl}}" alt="...">
+                <div class="cardy-body" style="text-align:center;">
+                    <h5 class="mt-0 mb-1">ID:{{photo.id}}</h5>
+                    <p class="card-text">{{photo.title}}</p>
+                </div>
+            </button>
+    </div>
+    
+
+    <div class="modal fade showimage" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" ng->
+                <img src="{{photo.url}}" alt="...">
+            </div>
+        </div>
+    </div>
+</div>

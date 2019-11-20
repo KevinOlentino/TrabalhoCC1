@@ -1,0 +1,23 @@
+﻿<div ng-controller="albumsController" data-ng-init="getAlbums();">
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>Title</td>
+                    <td>Details</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="album in albums">                    
+                    <td>{{album.id}}</td>
+                    <td>{{album.title}}</td>     
+                    <td>
+                        <a class="btn btn-success" href="#!/album/{{album.id}}">Detail</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-success" onclick="location.href='';">voltar</button>
+    </div>
+</div>

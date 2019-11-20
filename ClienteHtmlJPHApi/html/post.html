@@ -1,0 +1,47 @@
+﻿<div ng-controller="postController">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div style="text-align: center">
+                <h2>POST DETAIL - ID: {{post.id}}</h2>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div>
+                <span><b>USERID:</b>{{post.userId}}</span><br />
+                <span><b>ID:</b>{{post.id}}</span><br />
+                <span><b>TITLE:</b>{{post.title}}</span><br />
+                <span><b>BODY:</b>{{post.body}}</span><br />
+            </div>
+            <hr />
+            <table>
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>NAME</td>
+                        <td>EMAIL</td>
+                        <td>BODY</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="comment in comments">
+                        <td>{{comment.id}}</td>
+                        <td>{{comment.name}}</td>
+                        <td>{{comment.email}}</td>
+                        <td>{{comment.body}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2">
+            <div>
+                <button class="btn btn-success" onclick="location.href='#!/posts';">voltar</button>
+            </div>
+        </div>
+    </div>
+</div>

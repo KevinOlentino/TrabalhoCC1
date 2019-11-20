@@ -1,0 +1,27 @@
+﻿<div ng-controller="usersController" data-ng-init="getUsers();">
+
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Name</td>
+                    <td>Username</td>
+                    <td>Email</td>
+                    <td>Detail</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in users">
+                  
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+                        <td><a class="btn btn-success" href="#!/user/{{user.id}}">Detail</a></td>                        
+                </tr>
+            </tbody>
+        </table>   
+        <button class="btn btn-success" onclick="location.href='';">voltar</button>
+    </div>
+</div>

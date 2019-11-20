@@ -1,0 +1,41 @@
+﻿<div ng-controller="postsController" data-ng-init="getPosts();">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div style="text-align: center">
+                <h2>POSTS</h2>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <table class="table-bordered">
+                <thead>
+                    <tr>
+                        <td>userId</td>
+                        <td>id</td>
+                        <td>title</td>
+                        <td>body</td>
+                        <td>detail</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="post in posts">
+                        <td>{{post.userId}}</td>
+                        <td>{{post.id}}</td>
+                        <td>{{post.title}}</td>
+                        <td>{{post.body}}</td>
+                        <td>
+                            <a class="btn btn-success" href="#!/post/{{post.id}}">DETAIL</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-success" onclick="location.href='#!/root';">Back</button><br />
+        </div>
+    </div>
+</div>
